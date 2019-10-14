@@ -1,0 +1,65 @@
+/*************************
+Name: Joseph Sigar
+Tut: 10:30 Tuesday
+Assignment 2 Algorithm 1
+*************************/
+
+Get the Amount from the User
+Calculate and Count the Change	
+Print change to the User.
+
+
+1. Get the Amount from the User
+function GetChange
+	print "Enter Amount to be converted here:"
+	read change
+
+	return change
+endfunction GetChange
+
+function GetAmount
+	change = GetChange
+	
+	while change < 5 OR change > 95 OR change % 5 IS NOT 0
+		print "You have entered an invalid number"		
+		change = GetChange
+
+	return change
+endfunction GetAmount
+
+2. Calculate and Count the Change
+function CalcChange
+	if change > num OR change < num OR change <= 5
+		coins = change / num
+		rem = change % num
+	else
+		coins = 0
+		rem = change
+
+	return
+endfunction CalcChange
+
+function MakeChange
+	CalcChange(rem, 50, rem1, coins1)
+	CalcChange(rem1, 20, rem2, coins2)
+	CalcChange(rem2, 10, rem3, coins3)
+	CalcChange(rem3, 5, rem4, coins4)
+
+	return
+endfunction MakeChange
+
+3.	Print change to the User
+function PrintChange
+	print "The change for the amount" cent " is: "
+	print "Number of coins		|	Amount(change)"
+	print   coins1		"		|		 50 	"
+	print 	coins2 		"		|		 20		"
+	print 	coins3		"		|		 10		"
+	print 	coins4		"		|		 5		"
+		
+	return
+endfunction PrintChange
+
+
+
+

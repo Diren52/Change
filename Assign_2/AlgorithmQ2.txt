@@ -1,0 +1,69 @@
+/************************
+Name: Joseph Sigar
+Tut: 10:30 Tuesday
+Assignment 2 Algorithm 2
+************************/
+
+
+Get the amount.
+Convert the amount to change.
+Calculate the change.
+Print the Change.
+
+
+1. Get the Amount
+function GetAmount
+	print	"Enter amount to be converted: "
+	read amount
+	
+	return amount
+endfunction GetAmount
+
+2. Convert the amount to be changed
+function ConvChange
+	dollar = int change
+	cent = int ((change - dollar)*100) + 0.5
+	
+	return
+endfunction ConvChange
+
+function GetChange
+	ConvChange (change, dollar, cent)
+	
+	while cent % 5 != 0 OR change <= 0
+		print "You have entered an invalid value"
+		print "Try again"
+		
+		change = GetAmount 
+		ConvChange (change, dollar, cent)
+	
+	return
+endfunction GetChange
+
+3. Calculate the change
+function CalcChange
+
+	for i = x to valid_value
+		count[i] = change / num[i]
+		change = change % num[i]
+	
+	return
+endfunction CalcChange
+
+4. Print the Change
+function DisplayResult
+	for i = x to valid_value
+		print 	countch[i]  |  num[i]
+		
+	return
+endfunction DisplayResult
+
+function PrintChange
+	print "The amount of change required is: " change
+	print "Number of Change | Dollar"
+	DisplayResult (countd, num, valid_val, 0)
+	print "Number of change | cents"
+	DisplayResult (countc, num, valid_val-2, 1)
+	
+	return
+endfunction PrintChange
